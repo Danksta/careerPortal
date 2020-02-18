@@ -1,0 +1,41 @@
+<div class="ui secondary pointing menu" id="nav" style="background: whitesmoke;">
+    <a class="item" href="/">
+        Home
+    </a>
+    <a class="item active">
+        Messages
+    </a>
+    <a class="item">
+        Friends
+    </a>
+    <a class="item" href="/about">
+        About
+    </a>
+    <a class="item" href="/profile">
+        Profile
+    </a>
+    <div class="right menu">
+        <a class="ui item" href="#" id="changeTheme"
+           onclick="">
+            Change Theme
+        </a>
+        <script type="text/javascript">
+            colors = ['background: linear-gradient(to right, #636363, #a2ab58);', 'background: linear-gradient(to right, #a8c0ff, #3f2b96);', 'background: linear-gradient(to right, #fffbd5, #b20a2c);'];
+            document.getElementById('changeTheme').addEventListener('click', () => {
+                document.getElementsByTagName('body')[0].style.background = colors[1]
+
+            })
+        </script>
+
+        <a class="ui item" href="/login">
+            Login
+        </a>
+        <a class="ui item">
+            Logout
+        </a>
+    </div>
+</div>
+<!--
+<div class="ui segment">
+    <p></p>
+</div>-->
