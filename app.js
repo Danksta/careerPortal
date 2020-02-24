@@ -6,7 +6,7 @@ const publicDirectoryPath = pth.join(__dirname, './public');
 const viewsPath = pth.join(__dirname, './templates/views');
 const partialsPath = pth.join(__dirname, './templates/partials');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3003;
 
 //handlebars
 app.use(express.static(publicDirectoryPath));
@@ -41,6 +41,14 @@ app.get('/login', (req, res) => {
         name: "Wasim"
     })
 });
+
+app.get('/friends', (req, res) => {
+    res.render('friends', {
+        title: "Friends",
+        name: "Wasim"
+    })
+});
+
 
 app.listen(port, () => {
     console.log("Server is up on port " + port)
